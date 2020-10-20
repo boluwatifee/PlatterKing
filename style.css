@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+}
+nav{
+    height: 10%;
+    width: 100%;
+    font-family: Lato;
+    display: flex;
+    flex-direction: row;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+    width: 50%;
+
+}
+ul li{
+    padding: 20px 30px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-variant: small-caps;
+}
+a:hover{
+    color:rgb(231, 70, 70) ;
+    font-size: larger;
+}
+.logo{
+    padding: 20px 35px;
+    color: rgb(214, 119, 104);
+    font-size: 23px;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 2;
+}
+.sublogo{
+    font-family: mv boli;
+    font-weight: 300;
+    color: rgb(231, 70, 70);
+}
+.sublogo{
+    height: 5px;
+    width: 3px;
+}
+.container{
+    background:linear-gradient(rgba(0, 0, 0, 0.432),rgba(0,0,0,0.25)) , url("food.jpg");
+    height: 90vh;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.c1{
+    margin: 100px auto;
+    width: 500px;
+    height: 450px;
+    background-color: rgba(214, 119, 104, 0.863);
+}
+.extra{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    padding: 115px 0;
+}
+@media screen and (max-width :768px){
+        .hamburger{
+            top: 2%;
+            right: 5%;
+            transform: translate(-5%,-2%);
+            position: fixed;
+            cursor: pointer; 
+            z-index: 2;
+        }
+        .line{
+            background-color: black;
+            width: 30px;
+            height: 3px;
+            margin: 5px;
+        }
+        .nav-links{
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            clip-path: circle(100px at 90% -10%);
+            -webkit-clip-path: circle(100px at 90% -10%);
+            pointer-events: none;
+            transition: all 1s ease-out;
+            flex-direction: column;
+        }
+        .nav-links.open{
+            background-color: rgba(236, 238, 250, 0.966);
+            clip-path: circle(1000px at 90% -10%);
+            -webkit-clip-path: circle(1000px at 90% -10%);
+            pointer-events: all;
+        }
+        .nav-links li{
+            opacity: 0;
+        }
+        ul{
+            justify-content: unset;
+            padding:180px 0 ;
+        }
+        li.fade{
+            opacity: 1;
+        }
+        .nav-links li a{
+            font-family: Lato;
+            font-size: 25px;
+            font-weight: 400;
+            font-variant: small-caps;
+        }
+        nav{
+            position: relative;
+        }
+    .c1{
+        width: 80%;
+        height: 480px;
+    }
+}
